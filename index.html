@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DigiMenu</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+   body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+h1 {
+  font-size: 50px;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: red;
+}
+
+section.content {
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+	
+	/* Container for the row of images */
+    .list-container {
+      display: flex;
+      justify-content: center; /* Horizontally center the images */
+      align-items: center; /* Vertically align the images */
+    }
+    
+    /* Individual image styles */
+    .list-item {
+      width: 150px;
+      height: auto;
+      margin: 10px;
+    }
+ 	</style>
+</head>
+<body>
+  <header>
+    <h1>DigiMenu</h1>
+	
+  
+  
+  <input type="text" id="searchInput" placeholder="your favorite restraunt...">
+  <button id="searchButton">search</button>
+  
+  <!-- Results container -->
+  <div id="searchResults"></div>
+  
+    
+  </header>
+  <section class="content">
+    <nav>
+      <ul>
+        <li><a href="website.html">Melody Resturant</a></li>
+        <li><a href="mbchai.html">MBA Chaiwala</a></li>
+      </ul>
+    </nav>
+    <h2>Home Page Content</h2>
+    <p>This is the content of your home page.</p>
+	
+  
+  <section1>
+  <div class="list-container" >
+    <div class="list-item">Item 1</div>
+    <div class="list-item">Item 2</div>
+    <div class="list-item">Item 3</div>
+    <div class="list-item">Item 4</div>
+    <div class="list-item">Item 5</div>
+  </div>
+	<div class="list-container" >
+    <div class="list-item">Item 1</div>
+    <div class="list-item">Item 2</div>
+    <div class="list-item">Item 3</div>
+    <div class="list-item">Item 4</div>
+    <div class="list-item">Item 5</div>
+  </div>
+	<div class="list-container">
+    <div class="list-item">Item 1</div>
+    <div class="list-item">Item 2</div>
+    <div class="list-item">Item 3</div>
+    <div class="list-item">Item 4</div>
+    <div class="list-item">Item 5</div>
+  </div>
+  </section1>
+  </section>
+  <footer>
+    <p>&copy; 2023 DigiMenu. All rights reserved.</p>
+  </footer>
+	<script>
+    const searchButton = document.getElementById('searchButton');
+    const searchInput = document.getElementById('searchInput');
+    const searchResults = document.getElementById('searchResults');
+    
+    searchButton.addEventListener('click', performSearch);
+    searchInput.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+        performSearch();
+      }
+    });
+    
+    function performSearch() {
+      const searchTerm = searchInput.value;
+      
+      // Here, you can perform your search logic.
+      // For this example, let's just display the search term.
+      
+      searchResults.innerHTML = `Search results for: <strong>${searchTerm}</strong>`;
+    }
+  </script>
+</body>
+</html>
